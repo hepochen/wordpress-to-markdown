@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wordpress to Markdown - for FarBox.com</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="js/mootools-1.3.1.min.js"></script>
+    <script src="js-zip/jszip.js"></script>
+    <script src="js/filereader.js"></script>
+    <script src="js/to-markdown.js"></script>
+    <script src="js/bsp.js"></script>
+    <script src="js/wp2md.js"></script>
+
+
+</head>
+<body>
+
+
+
+<div id="content">
+
+    <div id="head">
+        <h1>WordPress to MarkDown <small>for FarBox.com</small></h1>
+    </div>
+
+    <div id="console">
+        <span>WordPress、BlogBus, the backup .xml:</span>
+
+        <input type="file" id="file-input" name="file-input"/>
+
+        <div>
+            <a class="button" href="#" onclick="download_zip();return false;">
+                DownLoad ZIP File
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div id="footer">
+
+    <div>
+        <div class="powered_by">
+            <a target='_blank' href="http://www.farbox.com">Proudly Powered By FarBox.com</a>
+            <span>©2012-2015 Z.R.E.Y Inc.</span>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+FileReaderJS.setupInput($('file-input'), opts);
+
+
+</script>
+
+
+</body>
+</html>
