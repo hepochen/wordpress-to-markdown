@@ -65,6 +65,7 @@ var opts = {
         load: function(e, file) {
             // Native ProgressEvent
             content = e.target.result;
+            content = content.replace(/<wp:comment>[\s\S]*?<\/wp:comment>/gi, '');
             bsp = new BSP(content);
 
             entries = bsp.format_entries();
