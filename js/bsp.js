@@ -128,7 +128,12 @@ var BSP = new Class({
                 value = value.replace(/(?:[^\n])\n([^\n])/gi, '\n\n$1'); //单\n的转\n\n
             }
             else if(key == 'url'){
-                value = new Element('a',{'href':value}).pathname;
+                if (value.indexOf('?') == -1){ // not contain ? in url
+                    value = new Element('a',{'href':value}).pathname;
+                }
+                else{ //ignore
+                    value = '';
+                }
             }
             formatted_e[key] = value;
         });

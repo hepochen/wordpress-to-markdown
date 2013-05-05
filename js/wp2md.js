@@ -21,7 +21,7 @@ function zip_entries(entries){
         var content = 'Title: ' + entry.title + '\n\n';
         content += 'Date: ' + entry.created + '\n\n';
         if (entry.status!='public') content += 'Status: ' + entry.status + '\n\n';
-        if (entry.url) content += 'URL: ' + entry.url + '\n\n';
+        if (entry.url && entry.url.indexOf('?')==-1) content += 'URL: ' + entry.url + '\n\n';
         if (entry.tags && entry.tags.length) content += 'Tags: ' + entry.tags.join(' , ') + '\n\n';
 
         content += entry.content;
